@@ -7,6 +7,7 @@ This project is using Nextjs + Tailwind + HeadlessUI + HeroIcons
 First, install dependencies and run development server:
 
 ```bash
+npm install -g yarn
 yarn
 yarn dev
 ```
