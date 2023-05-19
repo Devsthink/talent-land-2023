@@ -7,6 +7,9 @@ import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import classNames from "@/utils/classNames";
+import {signOut} from "next-auth/react";
+
 
 const ProfilePage = () => {
   const {
@@ -208,6 +211,14 @@ const ProfilePage = () => {
             </div>
           </form>
         </div>
+        <div
+        className={classNames(
+          "bg-gray-100 block px-4 py-2 text-sm text-black cursor-pointer"
+        )}
+        onClick={() => signOut()}
+      >
+        Salir
+      </div>
       </div>
     </AccountLayout>
   );
